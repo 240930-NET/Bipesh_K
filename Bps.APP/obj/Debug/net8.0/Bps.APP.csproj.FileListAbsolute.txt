@@ -1,0 +1,15 @@
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\bin\Debug\net8.0\Bps.APP.exe
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\bin\Debug\net8.0\Bps.APP.deps.json
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\bin\Debug\net8.0\Bps.APP.runtimeconfig.json
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\bin\Debug\net8.0\Bps.APP.dll
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\bin\Debug\net8.0\Bps.APP.pdb
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\obj\Debug\net8.0\Bps.APP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\obj\Debug\net8.0\Bps.APP.AssemblyInfoInputs.cache
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\obj\Debug\net8.0\Bps.APP.AssemblyInfo.cs
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\obj\Debug\net8.0\Bps.APP.csproj.CoreCompileInputs.cache
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\obj\Debug\net8.0\Bps.APP.sourcelink.json
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\obj\Debug\net8.0\Bps.APP.dll
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\obj\Debug\net8.0\refint\Bps.APP.dll
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\obj\Debug\net8.0\Bps.APP.pdb
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\obj\Debug\net8.0\Bps.APP.genruntimeconfig.cache
+C:\Users\Bipes\OneDrive\Desktop\newRevature\Bipesh_K\Bps.APP\obj\Debug\net8.0\ref\Bps.APP.dll
