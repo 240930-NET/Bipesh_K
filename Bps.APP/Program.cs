@@ -56,7 +56,7 @@ public class Program
                 FileWriter writer = new FileWriter();
                 string content = "This is a new text \n check it out!";
                 writer.WriteToFile(filepath, content);
-                writer.WriteToFile(filepath, jsonString);
+                //writer.WriteToFile(filepath, jsonString1);
                 string ndataFromFile = reader.ReadFile(filepath);
                 Console.WriteLine(ndataFromFile);
 
@@ -75,4 +75,30 @@ public class Program
         
     }
 }
+
+public class FileReader{
+
+    public string ReadFile(string pathname){
+
+        //To automatically release our resources we use the keyword "using" 
+        using(StreamReader sr = new StreamReader(pathname)){
+            return sr.ReadToEnd();
+        }
+
+    }
+}
+
+//Create a separate class that will handle Writing to files
+
+public class FileWriter{
+
+    public void WriteToFile(string pathname, string content){
+
+        using(StreamWriter writer = new StreamWriter(pathname)){
+            writer.WriteLine();
+        }
+    }
+}    //Create a separate class that will handle reading files
+
+
 }

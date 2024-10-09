@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bps.APP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4eba053f905fa5ec4dc448d2c002591e6c4d75fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+169a06022133306b5ae87c214ef2065af78f3bca")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bps.APP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bps.APP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
