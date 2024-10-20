@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text.Json;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 namespace Bps.APP
 {
 public class Program
@@ -9,13 +10,40 @@ public class Program
     
     public static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
-        Console.WriteLine("Welcome to Drive,Earn,Live 0");
+       
+
+      
+       
+       Greetings.StartWithGreet();
+       
+
+
+        // can I put the following variables in a class and bring them here?
         
-        int totalearn = 0;
-        int rate = 5;
-        List<String> numofpassengers = new List<String>();
+        double totalearn = 0;
+        double rate = 5;
+
+       
+
+
         
+
+        /*string filepath = "savefiledata.txt";
+        FileReader reader = new FileReader();
+        string dataFromFile = reader.ReadFile(filepath);
+        # trying to convert the following file reader and file writer code to class
+        */
+        
+        StreamReader reader1 = File.OpenText( "savefiledata.txt");
+        string datafromfile = reader1.ReadToEnd();
+
+    
+        
+
+
+
+        List<Passenger> numofpassengers = JsonSerializer.Deserialize<List<Passenger>>(datafromfile);
+        reader1.Close();
 
       
         while (true)
@@ -36,30 +64,55 @@ public class Program
                 string placeinput = Console.ReadLine();
 
                 Passenger passenger1 = new Passenger{Name = nameinput, Place = placeinput};
-                string jsonString = JsonSerializer.Serialize(passenger1);
-                Console.WriteLine(jsonString);
-                Console.WriteLine(passenger1.Name +  " is going to " + passenger1.Place);
-                totalearn = totalearn + rate;
-                Console.WriteLine("Total earning as of now is " + totalearn);
                 
-                numofpassengers.Add(passenger1.Name);
+                
+                Console.WriteLine(passenger1.Name +  " is going to " + passenger1.Place);
 
-                string jsonString1 = JsonSerializer.Serialize(passenger1);
+                totalearn= RunTotal.RunningTotal(totalearn, rate);
+
+                
+
+               
+                Console.WriteLine("Total earning as of now is $" + totalearn);
+                
+                numofpassengers.Add(passenger1);
+                foreach( Passenger x in numofpassengers){
+                    Console.WriteLine(x.Name);
+                }
+
+                string filepath = "savefiledata.txt";
+
+                /*
+                1. program starts
+                2. load information from the file to a list
+                3. program loop
+                4. before the program ends , save the information
+                5. program terminates
+
+
+
+
+                */
+                
+                
+
+                string jsonString1 = JsonSerializer.Serialize(numofpassengers);
                 Console.WriteLine(jsonString1);
+                try{
+                StreamWriter writer = new StreamWriter(filepath);
+                writer.WriteLine(jsonString1);
+                
+    
+                writer.Close();
+                }
+                catch(Exception ex){
+ 
+                Console.WriteLine(ex.Message);
+                }
+ 
 
-                Passenger deserializedJsonPassenger = JsonSerializer.Deserialize<Passenger>(jsonString);
-                Console.WriteLine("Here is the deserialzed object: " + deserializedJsonPassenger.Name);
-
-                FileReader reader = new FileReader();
-                string filepath = "savedfiledata.txt";
-
-                FileWriter writer = new FileWriter();
-                string content = "This is a new text \n check it out!";
-                writer.WriteToFile(filepath, content);
-                //writer.WriteToFile(filepath, jsonString1);
-                string ndataFromFile = reader.ReadFile(filepath);
-                Console.WriteLine(ndataFromFile);
-
+          
+                Console.WriteLine("We are arrived at " + passenger1.Place + " .Thank you for travelling with us!");
 
                 
                 
@@ -76,29 +129,34 @@ public class Program
     }
 }
 
+
+
+public  class RunTotal
+{
+    public static double RunningTotal(double TotalEarn, double Rate)
+    {
+        return TotalEarn += Rate;
+    }
+}
 public class FileReader{
 
     public string ReadFile(string pathname){
 
         //To automatically release our resources we use the keyword "using" 
-        using(StreamReader sr = new StreamReader(pathname)){
+        using(StreamReader sr = File.OpenText(pathname)){
+        
             return sr.ReadToEnd();
         }
 
     }
 }
-
-//Create a separate class that will handle Writing to files
-
 public class FileWriter{
 
     public void WriteToFile(string pathname, string content){
 
         using(StreamWriter writer = new StreamWriter(pathname)){
-            writer.WriteLine();
+            writer.WriteLine(content);
         }
     }
-}    //Create a separate class that will handle reading files
-
-
+}
 }
