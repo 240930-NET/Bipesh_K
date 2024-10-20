@@ -1708,6 +1708,16 @@
         "build": {
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "Bps.APP/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Bps.APP.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bps.APP.dll": {}
+        }
       }
     }
   },
@@ -5497,10 +5507,16 @@
         "xunit.runner.visualstudio.2.5.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Bps.APP/1.0.0": {
+      "type": "project",
+      "path": "../Bps.APP/Bps.APP.csproj",
+      "msbuildProject": "../Bps.APP/Bps.APP.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Bps.APP >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "coverlet.collector >= 6.0.0",
       "xunit >= 2.5.3",
@@ -5531,7 +5547,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Bipes\\OneDrive\\Desktop\\newRevature\\Bipesh_K\\Bps.APP\\Bps.APP.csproj": {
+              "projectPath": "C:\\Users\\Bipes\\OneDrive\\Desktop\\newRevature\\Bipesh_K\\Bps.APP\\Bps.APP.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

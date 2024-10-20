@@ -1,10 +1,35 @@
-namespace Bps.Tests;
+using System;
+using System.Diagnostics;
+using System.Security.Principal;
+using Xunit;
 
-public class UnitTest1
+
+
+using Bps.APP;
+ 
+namespace testRT
+{ 
+ 
+
+public class testingRNT
 {
     [Fact]
-    public void Test1()
+    public void RunTotalmethodtest()
     {
+       double tola = 0;
+       double rata = 5;
+
+        //Arrange
+        double expected = 5;
+        // Act
+        double actual = Bps.APP.RunTotal.RunningTotal(tola,rata);
+        
+
+        //Assert
+        Assert.Equal(expected, actual);
+        
+        
 
     }
+}
 }
